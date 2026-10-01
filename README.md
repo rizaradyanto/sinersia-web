@@ -6,6 +6,9 @@ mudah dipelajari, diedit, dan di-*deploy* ke GitHub Pages / hosting.
 
 Target domain: **sinersia.web.id**
 
+- Repo GitHub: <https://github.com/rizaradyanto/sinersia-web>
+- Website (GitHub Pages): <https://rizaradyanto.github.io/sinersia-web/>
+
 ---
 
 ## 1. Struktur Folder
@@ -101,12 +104,11 @@ git commit -m "Website pertama SINERSIA"
 ```
 
 ### d. Menghubungkan ke repository GitHub
-Buat repository baru di GitHub (misalnya bernama `sinersia-web`), lalu:
+Repository yang sudah dibuat:
 ```bash
 git branch -M main
-git remote add origin https://github.com/USERNAME/sinersia-web.git
+git remote add origin https://github.com/rizaradyanto/sinersia-web.git
 ```
-Ganti `USERNAME` dengan username GitHub Anda.
 
 ### e. Push ke GitHub
 ```bash
@@ -118,15 +120,32 @@ git push -u origin main
 2. Masuk **Settings** -> **Pages**.
 3. Pada **Source**, pilih **Deploy from a branch**.
 4. Pilih branch **main** dan folder **/ (root)** -> **Save**.
-5. Tunggu 1–2 menit. Website akan tersedia di:
-   `https://USERNAME.github.io/sinersia-web/`
+5. Tunggu 1–2 menit. Website tersedia di:
+   `https://rizaradyanto.github.io/sinersia-web/`
 
 ### g. Domain kustom (sinersia.web.id)
 1. Di **Settings -> Pages -> Custom domain**, isi `sinersia.web.id` -> Save.
-2. Di penyedia domain (misalnya **Sumopod**), tambahkan DNS:
-   - `A` record ke IP GitHub Pages, dan/atau
-   - `CNAME` untuk `www` ke `USERNAME.github.io`
-3. Aktifkan **Enforce HTTPS**.
+2. Di penyedia domain (misalnya **Sumopod**), tambahkan DNS berikut:
+
+   Untuk domain utama `sinersia.web.id` (4 record **A**):
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+   Untuk `www.sinersia.web.id` (1 record **CNAME**):
+   ```
+   CNAME  www  ->  rizaradyanto.github.io
+   ```
+   Opsional (IPv6, 4 record **AAAA**):
+   ```
+   2606:50c0:8000::153
+   2606:50c0:8001::153
+   2606:50c0:8002::153
+   2606:50c0:8003::153
+   ```
+3. Tunggu propagasi DNS (bisa beberapa menit hingga 24 jam), lalu aktifkan **Enforce HTTPS**.
 
 ---
 
