@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hubungi SINERSIA - alamat, telepon, email, dan formulir kontak." />
+  <title>Kontak | SINERSIA</title>
+  <link rel="icon" type="image/png" href="images/logo-sinersia.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Beranda SINERSIA">
+        <img src="images/logo-sinersia.png" alt="Logo SINERSIA" class="brand-logo" />
+        <span class="brand-text">
+          <strong>SINERSIA</strong>
+          <small>PT Sinergi Kompetensi Indonesia</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="programs.html">Program</a></li>
+          <li><a href="publications.html">Publikasi</a></li>
+          <li><a href="contact.html" class="active">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Hubungi Kami</h1>
+        <p>Kami siap membantu kebutuhan pelatihan dan pendampingan Anda.</p>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- Informasi kontak -->
+        <div class="contact-info">
+          <h2>Informasi Kontak</h2>
+
+          <ul class="info-list">
+            <li>
+              <span>Alamat</span>
+              <strong>Jl. Wologito Setapak No. 78, Kembangarum, Semarang 50148, Jawa Tengah</strong>
+            </li>
+            <li>
+              <span>Telepon</span>
+              <strong><a href="tel:+62247605975">(024) 7605975</a></strong>
+            </li>
+            <li>
+              <span>WhatsApp</span>
+              <strong><a href="https://wa.me/6281332190870" rel="noopener">0813-3219-0870</a></strong>
+            </li>
+            <li>
+              <span>Email</span>
+              <strong><a href="mailto:sinersia.marketing@gmail.com">sinersia.marketing@gmail.com</a></strong>
+            </li>
+          </ul>
+
+          <p class="contact-note">
+            Atau sampaikan pesan Anda melalui formulir di samping. Kami akan menghubungi Anda
+            kembali melalui email atau telepon.
+          </p>
+        </div>
+
+        <!-- Formulir kontak -->
+        <div class="contact-form-wrap">
+          <h2>Kirim Pesan</h2>
+
+          <!-- Formulir ini masih statis (tanpa server). Lihat js/script.js untuk cara kerjanya. -->
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required />
+              <small class="form-error" data-error-for="nama"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nama@email.com" required />
+              <small class="form-error" data-error-for="email"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+              <small class="form-error" data-error-for="pesan"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Kirim</button>
+
+            <!-- Pesan sukses/status ditampilkan oleh JavaScript -->
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-sinersia.png" alt="Logo SINERSIA" class="footer-logo" />
+        <p><strong>PT Sinergi Kompetensi Indonesia</strong></p>
+        <p>Mitra pengembangan kompetensi dan pemberdayaan UMKM.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li>Jl. Wologito Setapak No. 78, Kembangarum, Semarang 50148</li>
+          <li>Telp: (024) 7605975</li>
+          <li>WA: 0813-3219-0870</li>
+          <li>Email: <a href="mailto:sinersia.marketing@gmail.com">sinersia.marketing@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tautan</h4>
+        <ul>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="programs.html">Program</a></li>
+          <li><a href="publications.html">Publikasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="#" rel="noopener">Instagram</a></li>
+          <li><a href="#" rel="noopener">Facebook</a></li>
+          <li><a href="#" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> PT Sinergi Kompetensi Indonesia (SINERSIA). Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
